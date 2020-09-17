@@ -1,12 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(94, 92, 92);
+.container{         
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(94, 92, 92);    
 }
 
 h1 {
@@ -14,22 +15,49 @@ h1 {
     color: yellow;
 }
 
+.header{
+    padding: 20px;
+    margin-bottom: 20px;;
+}
 
-.media {
+#coins{    
+    height: 100%;
+    width: 100%;      
     display: flex;
-    flex-direction: row;
-    text-align: initial;
-    background-color: mintcream;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.media {  
+    height: auto;
+    width: auto; 
     
-    padding: 5px;
+    padding: 5px 15px;
+
     margin: 5px;
+
+    background-color: mintcream;
+
     border: none ;
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: 5px 5px 8px rgb(94, 92, 92);
 }
 
-#coin {
+.media img {
     width: 50px;
     height: 50px;
     margin-right: 15px;
+}
+
+@media screen and (max-width:600px){
+    #coins {
+        flex-direction: column;       
+    }
+
+    .media {  
+        height: 10%;
+        width: 80%;
+    }    
 }

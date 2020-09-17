@@ -1,5 +1,5 @@
 var apiKey = {
-    key: ''
+    key: '719a17b9-b471-40de-8d79-97b8d00698fd'
 }
 
 fetch ('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY='+apiKey.key)
@@ -8,14 +8,13 @@ fetch ('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=
         return response.json();
     })
     .then((api) =>{
-        // console.log(api);
-
+         console.log(api);
         var text = "";
 
-        for (let i = 0; i < 10; i++){
+        for (let i = 0; i < 12; i++){
             text = text + `
-            <div class="media">
-            <img id="coin" src="coin.png" class="align-self-center mr3" alt="coin" >
+            <div class="media ">
+            <img src="coin.png" class="align-self-center mr3" alt="coin" >
             <div class="media-body">
                 <h5 class="mt-2">${api.data[i].name}</h5>
                 <p>${api.data[i].symbol}</p>
